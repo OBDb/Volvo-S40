@@ -1,4 +1,19 @@
 { "commands": [
-
+{ "hdr": "DA10", "rax": "10", "dbg": true, "cmd": {"22": "F40A"}, "freq": 1, "filter": { "to": 2014 },
+  "signals": [
+    {"id": "S40_FUEL_P_DA10", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "kilopascal" }, "name": "Fuel pressure"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1E3F"}, "freq": 5,
+  "signals": [
+    {"id": "S40_ATF_T_1E3F", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "E004"}, "freq": 5, "filter": { "to": 2014 },
+  "signals": [
+    {"id": "S40_ATF_T_DA18", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "E501"}, "freq": 0.25, "filter": { "to": 2014 },
+  "signals": [
+    {"id": "S40_TQ_ENG", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "newtonMeters" }, "name": "Torque from engine"}
+  ]}
 ]
 }
